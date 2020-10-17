@@ -1,0 +1,819 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+
+    <title>ДБО Юр. Лица</title>
+	<link href="css/circle.css" rel="stylesheet"/>
+
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="./js/respond.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+
+
+		
+  </head>
+
+  <body>
+      <canvas id="pixie"></canvas>
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script>
+  <script src="js/parallaxsoon3.js" type="text/javascript"></script>
+
+
+  <div class="wrapper">
+      <div class="inner">
+        <h3 class="title">Брокер ДБО (юридические лица)</h3>
+        <div class="center">
+          <div class="wrap_tab">
+            <ul uk-accordion="multiple: true" >
+
+              <li>
+                <a class="uk-accordion-title" href="#">Страхование</a>
+                <div class="uk-accordion-content">
+
+                  <div class="uk-margin-small buttonGroupWrap">
+                    <div class="wrapSwitch">
+                      убытков от перерыва в деятельности
+                      <label class="switch">
+                        <input type="checkbox"
+                               onclick="toggle_visibility('Sber'),
+                               toggle_visibility('Rosbank')"
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      имущества
+                      <label class="switch">
+                        <input type="checkbox"
+
+                               onclick="toggle_visibility('Gazprom'),
+                               toggle_visibility('Pochta'),
+                               toggle_visibility('RosGos')"
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      гражданской ответственности
+                      <label class="switch">
+                        <input type="checkbox"
+
+                               onclick="toggle_visibility('Gazprom'),
+                               toggle_visibility('Pochta'),
+                               toggle_visibility('RosGos')"
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      страхование сотрудников
+                      <label class="switch">
+                        <input type="checkbox"
+
+                               onclick="toggle_visibility('PromSvaz'),
+                               toggle_visibility('Gazprom'),
+                               toggle_visibility('Pochta'),
+                                toggle_visibility('Sovcom')"
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      страхование бизнес карт
+                      <label class="switch">
+                        <input type="checkbox"
+                               onclick="
+                                toggle_visibility('Gazprom'),
+                               toggle_visibility('Pochta'),
+                                toggle_visibility('Sovcom')"
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="uk-margin-small buttonGroupWrap">
+                    <div class="wrapSwitch">
+                      грузов
+                      <label class="switch">
+                        <input type="checkbox"
+
+
+                               onclick="toggle_visibility('PromSvaz'),
+                               toggle_visibility('Gazprom'),
+                               toggle_visibility('Otkr'),
+                               toggle_visibility('Sovcom'),
+                                toggle_visibility('RosGos')"
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      недвижимости
+                      <label class="switch">
+                        <input type="checkbox"
+
+                               onclick="toggle_visibility('Tinkoff'),
+                               toggle_visibility('Sber'),
+                               toggle_visibility('Alphabank'),
+                               toggle_visibility('Otkr'),
+                                toggle_visibility('Akbars')"
+
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      каско
+                      <label class="switch">
+                        <input type="checkbox"
+
+                               onclick="toggle_visibility('RosSelHoz'),
+                               toggle_visibility('Tinkoff'),
+                               toggle_visibility('Sber'),
+                               toggle_visibility('Rosbank')"
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      страхование жизни
+                      <label class="switch">
+                        <input type="checkbox"
+
+                               onclick="toggle_visibility('RosSelHoz'),
+                               toggle_visibility('PromSvaz'),
+                               toggle_visibility('Rosbank'),
+                               toggle_visibility('Alphabank')"
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a class="uk-accordion-title" href="#">Сайт/техподдержка</a>
+                <div class="uk-accordion-content">
+
+                  <div class="uk-margin-small buttonGroupWrap">
+                    <div class="wrapSwitch">
+                      Почта
+                      <label class="switch">
+                        <input type="checkbox"
+                               onclick="toggle_visibility('RosSelHoz'), toggle_visibility('Pochta')"
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      Телефон
+                      <label class="switch">
+                        <input type="checkbox"
+
+                               onclick="toggle_visibility('Sovcom')"
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      техподдержка 24/7
+                      <label class="switch">
+                        <input type="checkbox"
+
+                               onclick="toggle_visibility('PromSvaz'),
+                                toggle_visibility('Alphabank'),
+                                toggle_visibility('RosGos'),
+                                toggle_visibility('Pochta')"
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      Бесплатная техподдержка
+                      <label class="switch">
+                        <input type="checkbox"
+
+                               onclick="toggle_visibility('PromSvaz'),
+                                toggle_visibility('Rosbank'),
+                                toggle_visibility('Alphabank'),
+                                toggle_visibility('Akbars'),
+                                toggle_visibility('Gazprom')"
+
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      Адаптированная версия
+                      <label class="switch">
+                        <input type="checkbox"
+
+                               onclick="toggle_visibility('Rosbank'),
+                                toggle_visibility('Alphabank'),
+                                toggle_visibility('Gazprom'),
+                                toggle_visibility('Otkr'),
+                                toggle_visibility('RosGos')"
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="uk-margin-small buttonGroupWrap">
+                    <div class="wrapSwitch">
+                      Приложение
+                      <label class="switch">
+                        <input type="checkbox"
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      сайт
+                      <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+              <li>
+                <a class="uk-accordion-title" href="#">варианты обслуживания</a>
+                <div class="uk-accordion-content">
+
+                  <div class="uk-margin-small buttonGroupWrap">
+                    <div class="wrapSwitch">
+                      регистрация бизнеса
+                      <label class="switch">
+                        <input type="checkbox"
+                               onclick="toggle_visibility('Tinkoff'),
+                               toggle_visibility('PromSvaz'),
+                               toggle_visibility('Sber'),
+                               toggle_visibility('Alphabank'),
+                               toggle_visibility('RosGos')"
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      сервисы
+                      <label class="switch">
+                        <input type="checkbox"
+
+                               onclick="toggle_visibility('Tinkoff'),
+                               toggle_visibility('PromSvaz'),
+                               toggle_visibility('Sber'),
+                               toggle_visibility('Alphabank'),
+                               toggle_visibility('Sovcom'),
+                               toggle_visibility('RosGos')"
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a class="uk-accordion-title" href="#">кредиты</a>
+                <div class="uk-accordion-content">
+
+                  <div class="uk-margin-small buttonGroupWrap">
+                    <div class="wrapSwitch">
+                      рефинансирование
+                      <label class="switch">
+                        <input type="checkbox"
+                               onclick="toggle_visibility('Rosbank'),
+                               toggle_visibility('Alphabank'),
+                               toggle_visibility('RosGos'),
+                                toggle_visibility('Sovcom')"
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      под залог недвижимости
+                      <label class="switch">
+                        <input type="checkbox"
+
+                               onclick="toggle_visibility('Tinkoff'),
+                               toggle_visibility('PromSvaz'),
+                               toggle_visibility('Rosbank'),
+                               toggle_visibility('RosGos'),
+                                toggle_visibility('Alphabank')"
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      овердрафт
+                      <label class="switch">
+                        <input type="checkbox"
+
+                               onclick="toggle_visibility('PromSvaz'),
+                               toggle_visibility('Sber'),
+                               toggle_visibility('Rosbank'),
+                               toggle_visibility('Alphabank'),
+                                toggle_visibility('Gazprom')"
+
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      льготы/господдержка
+                      <label class="switch">
+                        <input type="checkbox"
+
+                               onclick="toggle_visibility('RosSelHoz'),
+                               toggle_visibility('Tinkoff'),
+                               toggle_visibility('Alphabank'),
+                               toggle_visibility('Akbars'),
+                                toggle_visibility('Sovcom')"
+
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      автокредит
+                      <label class="switch"
+
+                             onclick="toggle_visibility('RosSelHoz'),
+                               toggle_visibility('PromSvaz'),
+                               toggle_visibility('Sber'),
+                               toggle_visibility('Otkr'),
+                                toggle_visibility('Akbars')"
+
+                      >
+                        <input type="checkbox"
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <a class="uk-accordion-title" href="#">Услуги ДБО</a>
+                <div class="uk-accordion-content">
+
+                  <div class="uk-margin-small buttonGroupWrap">
+                    <div class="wrapSwitch">
+                      платежи
+                      <label class="switch">
+                        <input type="checkbox"
+                               onclick="toggle_visibility('Tinkoff'),
+                                toggle_visibility('Sovcom'),
+                                toggle_visibility('Pochta'),
+                                toggle_visibility('Akbars'),
+                                toggle_visibility('RosGos')"
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      выписки
+                      <label class="switch">
+                        <input type="checkbox"
+
+                               onclick="toggle_visibility('Sovcom'),
+                                toggle_visibility('Akbars'),
+                                toggle_visibility('PromSvaz'),
+                                toggle_visibility('RosGos')"
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      приложение
+                      <label class="switch">
+                        <input type="checkbox"
+
+                               onclick="toggle_visibility('Rosbank'),
+                                toggle_visibility('Alphabank'),
+                                toggle_visibility('Gazprom'),
+                                toggle_visibility('Akbars')"
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      поддержка
+                      <label class="switch">
+                        <input type="checkbox"
+
+                               onclick="toggle_visibility('Sber'),
+                                toggle_visibility('Rosbank'),
+                                toggle_visibility('Alphabank'),
+                                toggle_visibility('Gazprom')"
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      бухгалтерия
+                      <label class="switch">
+                        <input type="checkbox"
+
+
+                               onclick="toggle_visibility('Sovcom'),
+                                toggle_visibility('RosSelHoz'),
+                                toggle_visibility('Sber')"
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a class="uk-accordion-title" href="#">Безопасность</a>
+                <div class="uk-accordion-content">
+
+                  <div class="uk-margin-small buttonGroupWrap">
+                    <div class="wrapSwitch">
+                      ЭЦП
+                      <label class="switch">
+                        <input type="checkbox"
+                               onclick="toggle_visibility('Alphabank'),
+                               toggle_visibility('RosGos')"
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      пароли смс
+                      <label class="switch">
+                        <input type="checkbox"
+
+                               onclick="toggle_visibility('Tinkoff'),
+                               toggle_visibility('PromSvaz'),
+                               toggle_visibility('Rosbank'),
+                               toggle_visibility('Gazprom'),
+                                toggle_visibility('Otkr'),
+                                toggle_visibility('Pochta'),
+                                toggle_visibility('Sovcom')"
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      защищенный носитель эцп
+                      <label class="switch">
+                        <input type="checkbox"
+
+                               onclick="toggle_visibility('RosSelHoz'),
+                               toggle_visibility('Sber'),
+                               toggle_visibility('Alphabank'),
+                               toggle_visibility('Gazprom'),
+                                toggle_visibility('Otkr'),
+                                toggle_visibility('RosGos'),
+                                toggle_visibility('Pochta'),
+                                toggle_visibility('Sovcom'),
+                                toggle_visibility('Akbars')"
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      уведомления об ip адресах
+                      <label class="switch">
+                        <input type="checkbox"
+
+                               onclick="toggle_visibility('RosSelHoz'),
+                               toggle_visibility('Sber'),
+                               toggle_visibility('Alphabank'),
+                               toggle_visibility('Gazprom'),
+                                toggle_visibility('Otkr'),
+                                toggle_visibility('RosGos'),
+                                toggle_visibility('Pochta'),
+                                toggle_visibility('Sovcom'),
+                                toggle_visibility('Tinkoff'),
+                                toggle_visibility('Akbars')"
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      защищенное приложение
+                      <label class="switch">
+                        <input type="checkbox"
+
+                               onclick="toggle_visibility('RosSelHoz'),
+                               toggle_visibility('Tinkoff'),
+                               toggle_visibility('PromSvaz'),
+                               toggle_visibility('Rosbank'),
+                                toggle_visibility('Gazprom'),
+                                toggle_visibility('Otkr'),
+                                toggle_visibility('Pochta')"
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a class="uk-accordion-title" href="#">эквайринг</a>
+                <div class="uk-accordion-content">
+
+                  <div class="uk-margin-small buttonGroupWrap">
+                    <div class="wrapSwitch">
+                      торговый
+                      <label class="switch">
+                        <input type="checkbox"
+                               onclick="toggle_visibility('Sber'),
+                               toggle_visibility('Rosbank'),
+                               toggle_visibility('Alphabank'),
+                                toggle_visibility('Otkr')"
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      мобильный
+                      <label class="switch">
+                        <input type="checkbox"
+                               onclick="toggle_visibility('Gazprom')"
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      интернет
+                      <label class="switch">
+                        <input type="checkbox"
+
+                               onclick="toggle_visibility('RosSelHoz'),
+                               toggle_visibility('Tinkoff'),
+                               toggle_visibility('Gazprom'),
+                                toggle_visibility('Pochta')"
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <a class="uk-accordion-title" href="#">встраиваемые системы ДБО</a>
+                <div class="uk-accordion-content">
+
+                  <div class="uk-margin-small buttonGroupWrap">
+                    <div class="wrapSwitch">
+                      бухгалтерия
+                      <label class="switch">
+                        <input type="checkbox"
+                               onclick="toggle_visibility('Rosbank'),
+                               toggle_visibility('Alphabank'),
+                               toggle_visibility('Otkr'),
+                               toggle_visibility('RosGos'),
+                               toggle_visibility('Akbars')"
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      мое дело
+                      <label class="switch">
+                        <input type="checkbox"
+
+                               onclick="toggle_visibility('PromSvaz'),
+                               toggle_visibility('Rosbank'),
+                               toggle_visibility('Alphabank'),
+                               toggle_visibility('Gazprom'),
+                               toggle_visibility('Otkr')"
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="wrapSwitch">
+                      etc...
+                      <label class="switch">
+                        <input type="checkbox"
+
+                               onclick="toggle_visibility('RosGos'),
+                               toggle_visibility('Akbars'),
+                               toggle_visibility('Pochta'),
+                               toggle_visibility('Sovcom')"
+
+                        >
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+          <hr class="uk-divider-icon">
+
+          <div class="cardWrapper">
+
+            <div class="wrapper_card">
+              <div id="Sber" class="RosSelHoz cardInner uk-card uk-card-default uk-card-body @m">
+                <h3 class=" RosSelHoz uk-card-title" >Сбербанк</h3>
+                <img class="logo" src="./img/sber_logo.png"/>
+                <p class="RosSelHoz" >
+                  Сбербанк — крупнейший банк в России, Центральной и Восточной Европе, один из ведущих международных финансовых институтов.
+                  Сбербанк работает над созданием экосистемы удобных онлайн-сервисов в самых разных сферах для любых жизненных ситуаций.
+                  В региональную сеть Сбербанка входят 11 территориальных банков с 14,2 тыс. подразделений в 83 субъектах РФ.
+                  В состав зарубежной сети Группы Сбербанк входят дочерние банки, филиалы и представительства в 18 странах мира.
+                  <br><a href="https://www.sberbank.com/ru">Подробнее</a>
+                </p>
+              </div>
+            </div>
+
+                <div class="wrapper_card">
+                  <div id="RosSelHoz" class="RosSelHoz cardInner uk-card uk-card-default uk-card-body @m">
+                    <h3 class=" RosSelHoz uk-card-title" >Россельхозбанк</h3>
+                    <img class="logo" src="./img/rshb_logo.png"/>
+                    <p class="RosSelHoz" >
+                      Акционерное общество «Российский Сельскохозяйственный банк» — один из крупнейших банков в России. Созданный в 2000 году в целях развития национальной кредитно-финансовой системы агропромышленного сектора и сельских территорий Российской Федерации, сегодня это универсальный коммерческий банк, предоставляющий все виды банковских услуг и занимающий лидирующие позиции в финансировании агропромышленного комплекса России. 
+                      <br><a href="https://www.rshb.ru/">Подробнее</a>
+                    </p>
+                  </div>
+              </div>
+
+            <div class="wrapper_card">
+              <div id="Gazprom" class="RosSelHoz cardInner uk-card uk-card-default uk-card-body @m">
+                <h3 class=" RosSelHoz uk-card-title" >Газпромбанк</h3>
+                <img class="logo" src="./img/gprb_logo.png"/>
+                <p class="RosSelHoz" >
+                  «Газпромбанк» (Акционерное общество) – один из крупнейших универсальных финансовых институтов России, предоставляющий широкий спектр банковских, финансовых, инвестиционных продуктов и услуг корпоративным и частным клиентам, финансовым институтам, институциональным и частным инвесторам. Банк входит в тройку крупнейших банков России по всем основным показателям и занимает третье место в списке банков Центральной и Восточной Европы по размеру собственного капитала.
+                  <br><a href="https://www.gazprombank.ru/">Подробнее</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="wrapper_card">
+              <div id="PromSvaz" class="RosSelHoz cardInner uk-card uk-card-default uk-card-body @m">
+                <h3 class=" RosSelHoz uk-card-title" >Промсвязьбанк</h3>
+                <img class="logo" src="./img/psb_logo.png"/>
+                <p class="RosSelHoz" >
+                  ПСБ — универсальный банк, основанный в 1995 году. Входит в десятку крупнейших банков России и в список системно значимых кредитных организаций, утвержденный Центробанком. В конце декабря 2019 года ПСБ был законодательно присвоен статус опорного банка для оборонно-промышленного комплекса. Услугами банка пользуются 2,5 миллиона физических и свыше 200 тысяч юридических лиц, в том числе более 10 тысяч крупных корпоративных клиентов. Сеть банка насчитывает около 300 точек продаж в России.
+
+                  Промсвязьбанк оказывает полный спектр услуг розничным и корпоративным клиентам, малому и среднему бизнесу.
+                  <br><a href="https://www.psbank.ru/">Подробнее</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="wrapper_card">
+              <div id="Tinkoff" class="RosSelHoz cardInner uk-card uk-card-default uk-card-body @m">
+                <h3 class=" RosSelHoz uk-card-title" >Тинькофф</h3>
+                <img class="logo" src="./img/tnkf_logo.png"/>
+                <p class="RosSelHoz" >
+                  Тинькофф — финансовая онлайн-экосистема, выстроенная вокруг потребностей клиента.
+Экосистема Тинькофф предоставляет полный спектр финансовых услуг для частных лиц и для бизнеса. 
+Тинькофф не имеет отделений: сеть собственных представителей позволяет доставлять продукты компании в любой регион страны в кратчайшие сроки, а клиенты обслуживаются через онлайн-каналы и контакт-центр. Во всех коммуникациях Тинькофф активно использует технологии искусственного интеллекта и машинного обучения, более 30% обращений клиентов в чатах обрабатывается без участия сотрудников банка.
+<br><a href="https://www.tinkoff.ru/">Подробнее</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="wrapper_card">
+                <div id="Alphabank" class="RosSelHoz cardInner uk-card uk-card-default uk-card-body @m">
+                <h3 class=" RosSelHoz uk-card-title" >Альфа-Банк</h3>
+                <img class="logo" src="./img/alfb_logo.png"/>
+                <p class="RosSelHoz" >
+                  АО «Альфа-Банк» – один из крупнейших универсальных банков России, принадлежащий консорциуму «Альфа-Групп». Позиции банка сильны практически во всех сегментах банковского рынка. Ключевыми источниками фондирования банка в равной степени выступают средства корпоративных клиентов и населения.
+                  <br><a href="https://alfabank.ru/">Подробнее</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="wrapper_card">
+              <div id="Akbars" class="RosSelHoz cardInner uk-card uk-card-default uk-card-body @m">
+                <h3 class=" RosSelHoz uk-card-title" >Ак Барс Банк</h3>
+                <img class="logo" src="./img/abb_logo.png"/>
+                <p class="RosSelHoz" >
+                  Акционерный коммерческий банк «АК БАРС» (публичное акционерное общество) зарегистрирован в ЦБ РФ и успешно работает на финансовом рынке с 1993 года.
+                  На 01.10.2020 г. территориальная сеть Ак Барс Банка насчитывает 129 дополнительных офисов, 83 операционных офиса, 11 операционных касс.
+                  Банк имеет все виды существующих в Российской Федерации банковских лицензий, оказывает банковские услуги для корпоративных и частных клиентов.
+                  <br><a href="https://www.akbars.ru/">Подробнее</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="wrapper_card">
+              <div id="Otkr" class="RosSelHoz cardInner uk-card uk-card-default uk-card-body @m">
+                <h3 class=" RosSelHoz uk-card-title" >Банк "Открытие"</h3>
+                <img class="logo" src="./img/otkr_logo.png"/>
+                <p class="RosSelHoz" >
+                  Банк «Открытие» входит в топ-10 крупнейших банков России и является системно значимым. Работает на финансовом рынке с 1993 года и развивает следующие направления бизнеса: корпоративный, инвестиционный, розничный, малый и средний, а также Private Banking.
+                  Региональная сеть банка насчитывает 599 клиентских офисов в 244 городах 73 регионов страны.
+                  <br><a href="https://www.open.ru/">Подробнее</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="wrapper_card">
+              <div id="Rosbank" class="RosSelHoz cardInner uk-card uk-card-default uk-card-body @m">
+                <h3 class=" RosSelHoz uk-card-title" >Росбанк</h3>
+                <img class="logo" src="./img/rosb_logo.png"/>
+                <p class="RosSelHoz" >
+                  ПАО «Росбанк» – универсальный финансовый институт с хорошо развитой филиальной сетью, один из крупнейших банков России. Контролируется французской финансовой группой Societe Generale (99,95%). Ключевые направления деятельности – розничный бизнес, обслуживание корпоративных клиентов, инвестиционно-банковские услуги, а также private banking.
+                  <br><a href="https://www.rosbank.ru/">Подробнее</a> 
+                </p>
+              </div>
+            </div>
+
+
+            <div class="wrapper_card">
+              <div id="Pochta" class="RosSelHoz cardInner uk-card uk-card-default uk-card-body @m">
+                <h3 class=" RosSelHoz uk-card-title" >Почта Банк</h3>
+                <img class="logo" src="./img/pchb_logo.png"/>
+                <p class="RosSelHoz" >
+                  Почта Банк — универсальный розничный банк, созданный в 2016 году группой ВТБ и Почтой России на базе Лето Банка.
+
+                  Ключевая цель Почта Банка — повышение доступности финансовых услуг для жителей России. Банк развивает масштабную региональную сеть на базе почтовых отделений, что позволит усилить проникновение базовых банковских услуг на всей территории России.
+                  По итогам 2019 года Почта Банк открыл 19 тыс. точек обслуживания в 83 регионах РФ. Более 80% из них приходится на небольшие города и сельскую местность. Число клиентов банка в 2019 году достигло 13,4 млн человек.
+                  <br><a href="https://www.pochtabank.ru/">Подробнее</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="wrapper_card">
+              <div id="Sovcom" class="RosSelHoz cardInner uk-card uk-card-default uk-card-body @m">
+                <h3 class=" RosSelHoz uk-card-title" >Совкомбанк</h3>
+                <img class="logo" src="./img/svcmb_logo.png"/>
+                <p class="RosSelHoz" >
+                  На протяжении 18 лет Совкомбанк успешно реализует собственную стратегию развития благодаря сочетанию элементов органического и неорганического роста. С 2014 года Группа Совкомбанка осуществила в общей сложности 10 приобретений, в результате чего удалось разнообразить продуктовую линейку и расширить клиентскую базу.
+                  В настоящее время бизнес-модель Банка основывается на функционировании трех основных сегментов: розничные банковские услуги, корпоративные банковские услуги и казначейство, которые в равной степени влияют на итоговый результат Группы.
+                  <br><a href="https://sovcombank.ru/">Подробнее</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="wrapper_card">
+              <div id="RosGos" class="RosSelHoz cardInner uk-card uk-card-default uk-card-body @m">
+                <h3 class=" RosSelHoz uk-card-title" >Росгосстрах Банк</h3>
+                <img class="logo" src="./img/rgstr_logo.png"/>
+                <p class="RosSelHoz" >
+                  РОСГОССТРАХ БАНК (ПАО «РГС Банк») — российский банк в рамках группы банка «Открытие» с фокусом на привлечении и комплексном обслуживании клиентов – автолюбителей и компаний из сферы автобизнеса. Клиентами Банка являются более 1,14 млн частных лиц и свыше 5 тысяч предприятий.
+                  <br><a href="https://www.rgsbank.ru/">Подробнее</a> 
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        </div>
+  </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/js/uikit.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/js/uikit-icons.min.js"></script>
+      <!--[endif]-->
+      <script type="text/javascript">
+        function toggle_visibility(id) {
+
+          let e = document.getElementById(id);
+
+            e.style.display = 'none';
+        }
+
+      </script>
+  </body>
+</html>
